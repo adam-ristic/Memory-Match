@@ -1,0 +1,14 @@
+.montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+}
+svg {
+  max-width: 100%;
+}
+.identifier {
+}

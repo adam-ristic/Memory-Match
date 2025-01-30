@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Memory Match</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+		<script src="js/memory_match.js"></script>
+	</head>
+	<body class="bg-light">
+		<!-- HEADER -->
+		<header class="text-center py-4 d-flex flex-column">
+			<div>
+				<svg height="170" width="450" xmlns="http://www.w3.org/2000/svg">
+					<path id="TitlePath" fill="none" stroke="none" d="M 25 150 q 200 -200 400 0"/>
+					<text>
+						<textpath href="#TitlePath" startOffset="3%">MEMORY MATCH</textpath>
+					</text>
+				</svg>
+				<h4 class="montserrat-font"><span id="highscore"></span></h4>
+				<h4 class="pb-3 montserrat-font">Round: <span id="round"></span></h4>
+			</div>
+			<div>
+				<button class="btn btn-outline-dark mr-5 montserrat-font" id="easyMode" title="Circles appear for 1500ms." onclick="getDifficulty(this.id)">Easy</button>
+				<button class="btn btn-outline-dark mx-5 montserrat-font" id="mediumMode" title="Circles appear for 1000ms." onclick="getDifficulty(this.id)">Medium</button>
+				<button class="btn btn-outline-dark ml-5 montserrat-font" id="hardMode" title="Circles appear for 500ms." onclick="getDifficulty(this.id)">Hard</button>
+			</div>
+		</header>
+		<!-- CIRCLES -->
+		<div class="container-fluid d-flex flex-column align-items-center gap-5">
+			<div class="row gap-5">
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg0"></svg></div>
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg1"></svg></div>
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg2"></svg></div>
+			</div>
+			<div class="row gap-5">
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg3"></svg></div>
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg4"></svg></div>
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg5"></svg></div>
+			</div>
+			<div class="row gap-5">
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg6"></svg></div>
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg7"></svg></div>
+				<div class="m-2 col"><svg class="identifier" height="100" width="100" id="svg8"></svg></div>
+			</div>
+		</div>
+		<div class="d-flex mt-4 justify-content-center">
+			<button id="start" class="btn btn-outline-dark montserrat-font" onclick="startTimer()">Start!</button>
+		</div>
+		<div class="d-flex mt-1 justify-content-center">
+			<button id="submit" class="btn btn-outline-dark montserrat-font" onclick="compareResponse()">Submit Answer</button>
+		</div>
+		<!-- FOOTER -->
+		<footer class="container-fluid d-flex flex-column align-items-center text-center mt-5 montserrat-font">
+			<div>
+				<p>&copy;2024 Adam Ristic</p>
+			</div>
+		</footer>
+	</body>
+</html>
